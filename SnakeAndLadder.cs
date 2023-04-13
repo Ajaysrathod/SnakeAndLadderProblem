@@ -50,12 +50,14 @@ namespace SnakeAndLadderProblem
         public static void PlayerWinCondition()
         {
             int position = 0;
+            int count = 0;
             Random random = new Random();
             Random random1 = new Random();
             while (position < 100)
             {
                 int diceRoll = random.Next(1, 7);
                 int option = random1.Next(1, 4);
+                count = count + 1;
                 switch (option)
                 {
                     case 1:
@@ -75,8 +77,10 @@ namespace SnakeAndLadderProblem
                         break;
                 }
             }
+            Console.WriteLine("The number of time dice rolled to get winning position " + count);
         }
     }
+    
 }
 
     
